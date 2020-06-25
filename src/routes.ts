@@ -1,4 +1,5 @@
 import test from "./intentHandlers/test";
+import travel from "./intentHandlers/travel";
 
 export default (request: IPrismeRequest) => {
   const {
@@ -14,6 +15,8 @@ export default (request: IPrismeRequest) => {
   switch (name) {
     case "test":
       return test();
+    case "travel":
+      return travel();
     case "default":
       return null;
   }
